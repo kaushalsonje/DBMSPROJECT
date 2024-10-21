@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Shop - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Medical Shop</h1>
+    </header>
+
+    <section class="content">
+        <div class="card">
+            <h2>Manage Medicines</h2>
+            <p>Keep track of your medicine inventory with ease.</p>
+            <div class="buttons">
+                <a href="{{ url_for('list_medicines') }}" class="btn">View Medicines</a>
+                <a href="{{ url_for('add_medicine') }}" class="btn">Add Medicine</a>
+                <a href="{{ url_for('sell_medicine') }}" class="btn">Sell Medicine</a>
+                <a href="{{ url_for('return_medicine') }}" class="btn">Return Medicine</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Medical Shop. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

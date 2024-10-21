@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Medicine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add_medicine.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Add New Medicine</h1>
+    </header>
+    <form method="POST">
+        <label for="_id">Medicine ID</label>
+        <input type="number" id="_id" name="_id" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="price">Price:</label>
+        <input type="number" step="0.01" id="price" name="price" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <button type="submit">Add Medicine</button>
+    </form>
+    <a href="{{ url_for('home') }}" class="back-to-home">Back to Home</a>
+</body>
+
+</html>

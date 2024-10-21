@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Medicine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/return_medicine.css') }}">
+</head>
+
+<body>
+    <h1>Return Medicine</h1>
+    <form method="POST">
+        <label for="medicine_id">Medicine ID:</label>
+        <input type="number" id="medicine_id" name="medicine_id" required><br><br>
+
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" id="customer_name" name="customer_name" required>
+
+        <label for="quantity_sold">Quantity Return:</label>
+        <input type="number" id="quantity_sold" name="quantity_sold" required>
+
+        <label for="sale_price">Sale Price:</label>
+        <input type="number" id="sale_price" name="sale_price" required>
+
+        <label for="date_sold">Date Return:</label>
+        <input type="date" id="date_sold" name="date_sold" required>
+
+        <button type="submit">Return Medicine</button>
+    </form>
+    <a href="{{ url_for('home') }}" class="back-to-home">Back to Home</a>
+</body>
+
+</html>
